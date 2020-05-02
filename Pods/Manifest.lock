@@ -1,0 +1,40 @@
+PODS:
+  - CommandLine (2.5.0):
+    - CommandLine/ANSI (= 2.5.0)
+    - CommandLine/Command (= 2.5.0)
+    - CommandLine/Interface (= 2.5.0)
+    - CommandLine/Launcher (= 2.5.0)
+    - CommandLine/Main (= 2.5.0)
+    - CommandLine/Tools (= 2.5.0)
+  - CommandLine/ANSI (2.5.0):
+    - CommandLine/Main
+    - CommandLine/Tools
+  - CommandLine/Command (2.5.0):
+    - CommandLine/ANSI
+    - CommandLine/Main
+  - CommandLine/Interface (2.5.0):
+    - CommandLine/ANSI
+    - CommandLine/Main
+  - CommandLine/Launcher (2.5.0):
+    - CommandLine/Main
+  - CommandLine/Main (2.5.0)
+  - CommandLine/Tools (2.5.0):
+    - CommandLine/Main
+  - MUFoundation/MUPath (0.0.6)
+
+DEPENDENCIES:
+  - CommandLine
+  - MUFoundation/MUPath
+
+SPEC REPOS:
+  trunk:
+    - CommandLine
+    - MUFoundation
+
+SPEC CHECKSUMS:
+  CommandLine: bbe17fd61d857f9f3098ed1a7d094f63027c661f
+  MUFoundation: 7ba494a348139d1a355a3f20b5ba3de11720c9d4
+
+PODFILE CHECKSUM: c7d4085d55226e303a5c07c19f42f8bfbe9d4a90
+
+COCOAPODS: 1.8.4

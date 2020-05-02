@@ -1,0 +1,15 @@
+//
+//  PrefixHeader.pch
+//  Notifier
+//
+//  Created by wushuang on 2020/05/02.
+//  Copyright © 2020 吴双. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <CommandLine/CommandLine.h>
+#import <MUFoundation/MUPath.h>
+
+#endif /* PrefixHeader_pch */
