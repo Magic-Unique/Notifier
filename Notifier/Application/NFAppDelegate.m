@@ -148,7 +148,6 @@
         NSString *uuid = notification.userInfo[@"uuid"];
         if (uuid) {
             if ([uuid isEqualToString:UUID]) {
-                NSLog(@"Remove");
                 [NSDefaultUserNotificationCenter removeDeliveredNotification:notification];
             }
         }

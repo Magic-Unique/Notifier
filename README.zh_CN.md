@@ -1,80 +1,80 @@
 # Notifier
 
-[中文说明](./README.zh_CN.md)
-
-Notifier is a command line tool to send a notification. It provide some apis with different user interface.
+[English](./README.md)
 
 
 
-# Features
+Notifier 是一个发送通知的命令行工具。它提供了不同用户交互的通知的 API
 
-1. Notification with message body
+# 功能
 
-2. Notification with title, subtilte body
+1. 发送一条信息体通知
 
-3. Notification with icon (On left of the notification banner)
+2. 发送一条带标题、子标题、信息体的通知
 
-4. Notification with image (On right of the notification banner)
+3. 发送一条带有图标的通知（在横幅的左边）
 
-5. Notification with one or more action button
+4. 发送一条带有图片的通知（在横幅的右边）
 
-6. Notification with reply text field
+5. 发送一条带有一个或者多个选择的通知
 
-7. Notification with sounds
+6. 发送一条可以回复内容的通知
 
-8. Notification with specially Application
+7. 发送一条带有声音的通知
 
-9. Notification with auto-hide after delay
+8. 模拟某一个应用发送一条通知
 
-# Install
+9. 发送一条通知并在特定时间后自动隐藏
 
-1. Download this repo
-2. Build `Notify (Release)` scheme in Xcode
-3. Typin `$ notify --help` to get help banner
+# 安装
 
-# Usage
+1. 下载这个仓库
+2. 使用 Xcode 编译 `Notify (Release)` scheme 
+3. 在终端中键入 `$ notify --help` 获取帮助信息
 
-### Base - Only Message
+# 使用
 
-Post a notification with a message body
+### 基本：基本信息
+
+发送一条信息体通知
 
 ```shell
 $ notify "This is the message body"
 ```
 
-And get banner:
+得到通知横幅:
 
 ![](Resources/base.png)
 
 ----
 
-### Base: More information
+### 基本：丰富信息
 
-Post a notification with title, subtitle, message
+发送一条带标题、子标题、信息体的通知
 
 ```shell
 $ notify "This is the message body" --title "title" --subtitle "subtitle"
 ```
 
-And get banner:
+得到通知横幅:
 
 ![](Resources/base-title.png)
 
 ---
 
-### Action: One Action
+### 交互：一个选择
 
-Post a notification with an action button and a close button
+发送一条带有选择的通知
 
 ```shell
 ACTION=$(notify 'Do u want to continue?' --action 'YES' --close 'NO')
 ```
 
-And get banner:
+得到通知横幅:
 
 ![](Resources/action-one.png)
 
-After user choose, command line will print action title and return. For example:
+当用户点击后，命令行将会输出用户点击的按钮的标题，并返回。 比如:
 
 ```shell
 ACTION=$(notify 'Do u want to continue?' --action 'YES' --close 'NO')
@@ -87,9 +87,9 @@ fi
 
 ---
 
-### Action: More Action
+### 交互：多个选择
 
-Post a notificaiton with two or more action buttons and a close button
+发送一条多个选择的通知
 
 ```shell
 ACTION=$(notify 'What do you want?' --action 'Coffee' --action 'Tea' --action 'Milk' --menu 'Menu')
@@ -108,15 +108,15 @@ else
 fi
 ```
 
-And get banner:
+得到通知横幅:
 
 ![](Resources/action-more.png)
 
 ---
 
-### Action: Reply Action
+### 交互：回复
 
-Post a notification with a reply text field
+发送一条带有回复消息输入框的通知
 
 ```shell
 ACTION=$(notify 'Steve: Go tomorrow?' --reply 'Reply Steve')
@@ -127,29 +127,29 @@ else
 fi
 ```
 
-And get banner:
+得到通知横幅:
 
 ![](Resources/action-reply.png)
 
 ---
 
-### Media: Icon & Image
+### 媒体: 图标 & 图片
 
-Post a notification with a spically icon or an image
+发送一条带有图标或者图片的通知
 
 ```shell
 $ notify 'Message' --icon './icon.png' --image './image.png'
 ```
 
-And get banner:
+得到通知横幅:
 
 ![](Resources/media-image.png)
 
 ---
 
-### Media: Sound
+### 媒体: 声音
 
-Post a notification with sound
+发送一条带有声音的通知
 
 ```shell
 $ notify 'Message' --sound 'default' # post with a ringing
@@ -157,9 +157,9 @@ $ notify 'Message' --sound 'default' # post with a ringing
 
 ---
 
-### Timeout
+### 超时
 
-Post a notification and auto hide after delay.
+发送一条会自动隐藏的通知
 
 ```shell
 ACTION=$(notify 'Some error, repeat?' --action 'YES' --close 'NO' --timeout 5)
@@ -170,22 +170,20 @@ fi
 
 ---
 
-### Application
+### 应用程序
 
-Post a notification with a specially application
+模拟一个应用发送通知
 
 ```shell
 $ notify 'Download succeed!' --sender 'com.apple.finder'
 ```
 
-And get banner:
+得到通知横幅:
 
 ![](Resources/sender.png)
 
 ---
 
-# LICENSE
+# 协议
 
 MIT.
-
-
