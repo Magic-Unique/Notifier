@@ -1,13 +1,13 @@
 //
-//  Notifier.m
+//  Notifier+Usage.h
 //  Notifier
 //
-//  Created by 冷秋 on 2020/05/02.
+//  Created by Magic-Unique on 2020/5/3.
 //  Copyright © 2020 Magic-Unique. All rights reserved.
 //
 
 #import "Notifier.h"
 
-@implementation Notifier
+@interface Notifier (Usage)
 
 @end

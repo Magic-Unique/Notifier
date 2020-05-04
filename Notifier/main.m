@@ -2,8 +2,8 @@
 //  main.m
 //  Notifier
 //
-//  Created by wushuang on 2020/05/02.
-//  Copyright © 2020 吴双. All rights reserved.
+//  Created by 冷秋 on 2020/05/02.
+//  Copyright © 2020 Magic-Unique. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -11,7 +11,9 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        CLMainExplain = @"This is command line project";
+        [CLCommand setParametersSortType:CLSortTypeByAddingQueue];
+        CLCommand.mainCommand.version = @"1.0.0";
+        CLMainExplain = @"Send notification on macOS from command line.";
         CLMakeSubcommand(Notifier, __init_);
         CLCommandMain();
     }

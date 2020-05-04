@@ -1,5 +1,5 @@
 //
-//  Notifier.m
+//  Notifier+Commands.h
 //  Notifier
 //
 //  Created by 冷秋 on 2020/05/02.
@@ -8,6 +8,6 @@
 
 #import "Notifier.h"
 
-@implementation Notifier
+@interface Notifier (Send)
 
 @end
