@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		31697C788551B4FA63271EA6 /* libPods-Notifier.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48589FA8DC1F8287E6664D4D /* libPods-Notifier.a */; };
 		6D328065245D36F9008F09AA /* NFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D328064245D36F9008F09AA /* NFAppDelegate.m */; };
+		6D3DB7E62461238A00C73197 /* NSObject+Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3DB7E52461238A00C73197 /* NSObject+Runtime.m */; };
 		6D4EC6AB2407E90B00733D80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4EC6AA2407E90B00733D80 /* main.m */; };
 		6D4EC6B52407E9BA00733D80 /* Notifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4EC6B42407E9BA00733D80 /* Notifier.m */; };
 		6D7B67D6245E70A200286355 /* NFNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7B67D5245E70A200286355 /* NFNotification.m */; };
@@ -35,6 +36,8 @@
 		6D328063245D36F9008F09AA /* NFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NFAppDelegate.h; sourceTree = "<group>"; };
 		6D328064245D36F9008F09AA /* NFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NFAppDelegate.m; sourceTree = "<group>"; };
 		6D328066245D3798008F09AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D3DB7E42461238A00C73197 /* NSObject+Runtime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Runtime.h"; sourceTree = "<group>"; };
+		6D3DB7E52461238A00C73197 /* NSObject+Runtime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Runtime.m"; sourceTree = "<group>"; };
 		6D4EC6A72407E90B00733D80 /* Notifier */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Notifier; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D4EC6AA2407E90B00733D80 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6D4EC6B12407E92700733D80 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -142,6 +145,8 @@
 		6D7B67D7245EB84700286355 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				6D3DB7E42461238A00C73197 /* NSObject+Runtime.h */,
+				6D3DB7E52461238A00C73197 /* NSObject+Runtime.m */,
 				6D7B67D8245EB85500286355 /* NSBundle+Notifier.h */,
 				6D7B67D9245EB85500286355 /* NSBundle+Notifier.m */,
 			);
@@ -262,6 +267,7 @@
 			files = (
 				6D4EC6AB2407E90B00733D80 /* main.m in Sources */,
 				6D805CCB244948C80017A717 /* Notifier+Send.m in Sources */,
+				6D3DB7E62461238A00C73197 /* NSObject+Runtime.m in Sources */,
 				6DBCBECA245F1747001A1F0E /* NFGraphices.m in Sources */,
 				6D7B67DA245EB85500286355 /* NSBundle+Notifier.m in Sources */,
 				6D328065245D36F9008F09AA /* NFAppDelegate.m in Sources */,
@@ -390,6 +396,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PREFIX_HEADER = "${TARGET_NAME}/PrefixHeader.pch";
 				INFOPLIST_FILE = "${TARGET_NAME}/Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MARKETING_VERSION = 1.0.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -413,6 +420,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PREFIX_HEADER = "${TARGET_NAME}/PrefixHeader.pch";
 				INFOPLIST_FILE = "${TARGET_NAME}/Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MARKETING_VERSION = 1.0.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",

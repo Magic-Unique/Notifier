@@ -7,6 +7,7 @@
 //
 
 #import "NSBundle+Notifier.h"
+#import "NSObject+Runtime.h"
 #import <objc/runtime.h>
 
 @implementation NSBundle (Notifier)
@@ -14,9 +15,7 @@
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        Method m1 = class_getInstanceMethod(self, @selector(bundleIdentifier));
-        Method m2 = class_getInstanceMethod(self, @selector(nf_bundleIdentifier));
-        method_exchangeImplementations(m1, m2);
+        [self exchange:@selector(bundleIdentifier) with:@selector(nf_bundleIdentifier)];
     });
 }
 

@@ -53,11 +53,11 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "usage"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "send"
-            isEnabled = "NO">
+            argument = "message"
+            isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--icon /Users/wushuang/Desktop/[youdao]/youdao/iTunesArtwork"

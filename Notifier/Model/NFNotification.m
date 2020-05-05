@@ -25,6 +25,7 @@
     userNotification.informativeText = self.message;
     userNotification.hasActionButton = NO;
     [userNotification setValue:@NO forKey:@"_alwaysShowAlternateActionMenu"];
+    [userNotification setValue:@NO forKey:@"_showsButtons"];
     
     if (self.close) {
         userNotification.otherButtonTitle = self.close;
@@ -38,14 +39,16 @@
         userNotification.hasActionButton = YES;
         
         if (self.actions.count > 1) {
-            NSMutableArray *actions = [NSMutableArray array];
-            for (NSString *btn in self.actions) {
-                NSUserNotificationAction *action = [NSUserNotificationAction actionWithIdentifier:btn title:btn];
-                [actions addObject:action];
-            }
-            userNotification.additionalActions = actions;
+            
+            userNotification.additionalActions = ({
+                NSMutableArray *actions = [NSMutableArray array];
+                for (NSString *btn in self.actions) {
+                    NSUserNotificationAction *action = [NSUserNotificationAction actionWithIdentifier:btn title:btn];
+                    [actions addObject:action];
+                }
+                actions;
+            });
             [userNotification setValue:@YES forKey:@"_alwaysShowAlternateActionMenu"];
-
             
             if (self.menu) {
                 userNotification.actionButtonTitle = self.menu;

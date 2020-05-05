@@ -14,5 +14,7 @@
 + (instancetype)sharedDelegate;
 
 - (void)runWithNotification:(NFNotification *)notification;
+
+- (void)exit;
  
 @end

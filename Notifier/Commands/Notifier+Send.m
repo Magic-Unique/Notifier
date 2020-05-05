@@ -87,20 +87,20 @@
         
         NFNotification *notification = [NFNotification new];
 #ifdef DEBUG
-        notification.title = @"Title";
-        notification.subtitle = @"Subtitle";
+//        notification.title = @"Title";
+//        notification.subtitle = @"Subtitle";
         notification.message = @"Message";
-        notification.menu = @"MENU";
-        notification.actions = @[@"a1", @"a2"];
+//        notification.menu = @"MENU";
+//        notification.actions = @[@"a1", @"a2"];
         //        notification.reply = @"REPLY";
-        notification.close = @"CLOSE";
-        notification.sender = @"com.apple.safari";
+//        notification.close = @"CLOSE";
+//        notification.sender = @"com.apple.safari";
         //        notification.timeout = 5;
         
-        NSString *image = @"/Users/冷秋/Desktop/icon.png";
+//        NSString *image = @"/Users/冷秋/Desktop/icon.png";
         
-        notification.icon = image;
-        notification.image = image;
+//        notification.icon = image;
+//        notification.image = image;
 #else
         notification.title = process.queries[@"title"];
         notification.subtitle = process.queries[@"subtitle"];

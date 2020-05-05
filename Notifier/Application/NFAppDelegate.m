@@ -131,7 +131,7 @@
         NSString *result = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         CLPrintf(@"%@\n", result);
     } else {
-        CLPrintf(@"%@\n", content?:@"");
+        CLPrintf(@"%@\n", content?:action);
     }
 }
 
@@ -152,6 +152,12 @@
             }
         }
     }
+}
+
+- (void)exit {
+    [self removeCurrentNotification];
+    [self response:@"cancel" content:@"cancel"];
+    exit(0);
 }
 
 @synthesize UUID = _UUID;
