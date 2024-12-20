@@ -56,7 +56,7 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "message"
+            argument = "send message -J -c &#x5173;&#x95ed; -T 3 -A com.apple.Finder"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument

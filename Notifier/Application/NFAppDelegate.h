@@ -9,7 +9,19 @@
 #import <Cocoa/Cocoa.h>
 #import "NFNotification.h"
 
+@class NFAppDelegate;
+
+@protocol NFAppDelegateHandler <NSObject>
+
+@optional
+
+- (void)delegate:(NFAppDelegate *)delegate response:(NSString *)action content:(NSString *)content;
+
+@end
+
 @interface NFAppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate>
+
+@property (nonatomic, weak) id<NFAppDelegateHandler> handler;
 
 + (instancetype)sharedDelegate;
 

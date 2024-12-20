@@ -122,16 +122,8 @@
 }
 
 - (void)response:(NSString *)action content:(NSString *)content {
-    BOOL useJSON = [[CLProcess currentProcess] flag:@"json"];
-    if (useJSON) {
-        NSMutableDictionary *JSON = [NSMutableDictionary dictionary];
-        JSON[@"action"] = action;
-        JSON[@"content"] = content;
-        NSData *data = [NSJSONSerialization dataWithJSONObject:JSON options:kNilOptions error:nil];
-        NSString *result = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        CLPrintf(@"%@\n", result);
-    } else {
-        CLPrintf(@"%@\n", content?:action);
+    if ([self.handler respondsToSelector:@selector(delegate:response:content:)]) {
+        [self.handler delegate:self response:action content:content];
     }
 }
 

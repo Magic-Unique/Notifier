@@ -8,12 +8,23 @@
 #ifndef CommandLine_h
 #define CommandLine_h
 
-#if __has_include(<CommandLine/Command.h>)
-#import <CommandLine/Command.h>
-#elif __has_include("Command.h")
-#import "Command.h"
-#else
-#define CLCommand NSObject
+#if __has_include(<CommandLine/CLCommand.h>)
+#import <CommandLine/CLCommand.h>
+#import <CommandLine/CLRunner.h>
+#import <CommandLine/CLType.h>
+#import <CommandLine/CLIO.h>
+#elif __has_include("CLCommand.h")
+#import "CLCommand.h"
+#endif
+
+#if __has_include(<CommandLine/CLHelpBanner.h>)
+#import <CommandLine/CLHelpBannerProvider.h>
+#import <CommandLine/CLHelpBanner.h>
+#import <CommandLine/CLDefaultHelpBannerProvider.h>
+#elif __has_include("CLHelpBanner.h")
+#import "CLHelpBannerProvider.h"
+#import "CLHelpBanner.h"
+#import "CLDefaultHelpBannerProvider.h"
 #endif
 
 #if __has_include(<CommandLine/Tools.h>)

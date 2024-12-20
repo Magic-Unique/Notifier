@@ -11,11 +11,9 @@
 		6D328065245D36F9008F09AA /* NFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D328064245D36F9008F09AA /* NFAppDelegate.m */; };
 		6D3DB7E62461238A00C73197 /* NSObject+Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3DB7E52461238A00C73197 /* NSObject+Runtime.m */; };
 		6D4EC6AB2407E90B00733D80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4EC6AA2407E90B00733D80 /* main.m */; };
-		6D4EC6B52407E9BA00733D80 /* Notifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4EC6B42407E9BA00733D80 /* Notifier.m */; };
 		6D7B67D6245E70A200286355 /* NFNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7B67D5245E70A200286355 /* NFNotification.m */; };
 		6D7B67DA245EB85500286355 /* NSBundle+Notifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7B67D9245EB85500286355 /* NSBundle+Notifier.m */; };
-		6D805CCB244948C80017A717 /* Notifier+Send.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D805CCA244948C80017A717 /* Notifier+Send.m */; };
-		6DBCBEC7245F15F4001A1F0E /* Notifier+Usage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DBCBEC6245F15F4001A1F0E /* Notifier+Usage.m */; };
+		6D805CCB244948C80017A717 /* Send.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D805CCA244948C80017A717 /* Send.m */; };
 		6DBCBECA245F1747001A1F0E /* NFGraphices.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DBCBEC9245F1747001A1F0E /* NFGraphices.m */; };
 /* End PBXBuildFile section */
 
@@ -41,16 +39,12 @@
 		6D4EC6A72407E90B00733D80 /* Notifier */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Notifier; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D4EC6AA2407E90B00733D80 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6D4EC6B12407E92700733D80 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		6D4EC6B32407E9BA00733D80 /* Notifier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Notifier.h; sourceTree = "<group>"; };
-		6D4EC6B42407E9BA00733D80 /* Notifier.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Notifier.m; sourceTree = "<group>"; };
 		6D7B67D4245E70A200286355 /* NFNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NFNotification.h; sourceTree = "<group>"; };
 		6D7B67D5245E70A200286355 /* NFNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NFNotification.m; sourceTree = "<group>"; };
 		6D7B67D8245EB85500286355 /* NSBundle+Notifier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Notifier.h"; sourceTree = "<group>"; };
 		6D7B67D9245EB85500286355 /* NSBundle+Notifier.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Notifier.m"; sourceTree = "<group>"; };
-		6D805CC9244948C80017A717 /* Notifier+Send.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Notifier+Send.h"; sourceTree = "<group>"; };
-		6D805CCA244948C80017A717 /* Notifier+Send.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Notifier+Send.m"; sourceTree = "<group>"; };
-		6DBCBEC5245F15F4001A1F0E /* Notifier+Usage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Notifier+Usage.h"; sourceTree = "<group>"; };
-		6DBCBEC6245F15F4001A1F0E /* Notifier+Usage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Notifier+Usage.m"; sourceTree = "<group>"; };
+		6D805CC9244948C80017A717 /* Send.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Send.h; sourceTree = "<group>"; };
+		6D805CCA244948C80017A717 /* Send.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Send.m; sourceTree = "<group>"; };
 		6DBCBEC8245F1747001A1F0E /* NFGraphices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NFGraphices.h; sourceTree = "<group>"; };
 		6DBCBEC9245F1747001A1F0E /* NFGraphices.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NFGraphices.m; sourceTree = "<group>"; };
 		A8C8AC2D39459A2DA35FFB4A /* Pods-Notifier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notifier.debug.xcconfig"; path = "Target Support Files/Pods-Notifier/Pods-Notifier.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,12 +115,8 @@
 		6D4EC6B22407E9AB00733D80 /* Commands */ = {
 			isa = PBXGroup;
 			children = (
-				6D4EC6B32407E9BA00733D80 /* Notifier.h */,
-				6D4EC6B42407E9BA00733D80 /* Notifier.m */,
-				6D805CC9244948C80017A717 /* Notifier+Send.h */,
-				6D805CCA244948C80017A717 /* Notifier+Send.m */,
-				6DBCBEC5245F15F4001A1F0E /* Notifier+Usage.h */,
-				6DBCBEC6245F15F4001A1F0E /* Notifier+Usage.m */,
+				6D805CC9244948C80017A717 /* Send.h */,
+				6D805CCA244948C80017A717 /* Send.m */,
 			);
 			path = Commands;
 			sourceTree = "<group>";
@@ -266,14 +256,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D4EC6AB2407E90B00733D80 /* main.m in Sources */,
-				6D805CCB244948C80017A717 /* Notifier+Send.m in Sources */,
+				6D805CCB244948C80017A717 /* Send.m in Sources */,
 				6D3DB7E62461238A00C73197 /* NSObject+Runtime.m in Sources */,
 				6DBCBECA245F1747001A1F0E /* NFGraphices.m in Sources */,
 				6D7B67DA245EB85500286355 /* NSBundle+Notifier.m in Sources */,
 				6D328065245D36F9008F09AA /* NFAppDelegate.m in Sources */,
 				6D7B67D6245E70A200286355 /* NFNotification.m in Sources */,
-				6DBCBEC7245F15F4001A1F0E /* Notifier+Usage.m in Sources */,
-				6D4EC6B52407E9BA00733D80 /* Notifier.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,7 +384,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PREFIX_HEADER = "${TARGET_NAME}/PrefixHeader.pch";
 				INFOPLIST_FILE = "${TARGET_NAME}/Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 1.0.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -420,7 +408,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PREFIX_HEADER = "${TARGET_NAME}/PrefixHeader.pch";
 				INFOPLIST_FILE = "${TARGET_NAME}/Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 1.0.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",

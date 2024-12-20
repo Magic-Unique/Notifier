@@ -1,40 +1,63 @@
 PODS:
-  - CommandLine (2.5.0):
-    - CommandLine/ANSI (= 2.5.0)
-    - CommandLine/Command (= 2.5.0)
-    - CommandLine/Interface (= 2.5.0)
-    - CommandLine/Launcher (= 2.5.0)
-    - CommandLine/Main (= 2.5.0)
-    - CommandLine/Tools (= 2.5.0)
-  - CommandLine/ANSI (2.5.0):
+  - CommandLine (3.0.6):
+    - CommandLine/Command (= 3.0.6)
+    - CommandLine/Interface (= 3.0.6)
+    - CommandLine/Launcher (= 3.0.6)
+  - CommandLine/ANSI (3.0.6):
     - CommandLine/Main
     - CommandLine/Tools
-  - CommandLine/Command (2.5.0):
+  - CommandLine/Command (3.0.6):
+    - CommandLine/ANSI
+    - CommandLine/Error
+    - CommandLine/Helper
+    - CommandLine/I18N
+    - CommandLine/Info
+    - CommandLine/Main
+  - CommandLine/Error (3.0.6):
+    - CommandLine/I18N
+    - CommandLine/Main
+  - CommandLine/Helper (3.0.6):
+    - CommandLine/ANSI
+    - CommandLine/I18N
+    - CommandLine/Info
+    - CommandLine/Main
+  - CommandLine/I18N (3.0.6):
+    - CommandLine/Main
+  - CommandLine/Info (3.0.6):
+    - CommandLine/I18N
+    - CommandLine/Main
+  - CommandLine/Interface (3.0.6):
     - CommandLine/ANSI
     - CommandLine/Main
-  - CommandLine/Interface (2.5.0):
-    - CommandLine/ANSI
+  - CommandLine/Launcher (3.0.6):
     - CommandLine/Main
-  - CommandLine/Launcher (2.5.0):
-    - CommandLine/Main
-  - CommandLine/Main (2.5.0)
-  - CommandLine/Tools (2.5.0):
+  - CommandLine/Main (3.0.6)
+  - CommandLine/Tools (3.0.6):
     - CommandLine/Main
   - MUFoundation/MUPath (0.0.6)
 
 DEPENDENCIES:
-  - CommandLine
+  - "CommandLine (from `git@gitee.com:pica/CommandLine.git`, tag `3.0.6`)"
   - MUFoundation/MUPath
 
 SPEC REPOS:
   trunk:
-    - CommandLine
     - MUFoundation
 
+EXTERNAL SOURCES:
+  CommandLine:
+    :git: "git@gitee.com:pica/CommandLine.git"
+    :tag: 3.0.6
+
+CHECKOUT OPTIONS:
+  CommandLine:
+    :git: "git@gitee.com:pica/CommandLine.git"
+    :tag: 3.0.6
+
 SPEC CHECKSUMS:
-  CommandLine: bbe17fd61d857f9f3098ed1a7d094f63027c661f
+  CommandLine: dccf4ba5d7d681144cd3d4ed87b86d569e1ab6cf
   MUFoundation: 7ba494a348139d1a355a3f20b5ba3de11720c9d4
 
-PODFILE CHECKSUM: c7d4085d55226e303a5c07c19f42f8bfbe9d4a90
+PODFILE CHECKSUM: 5231181cbdfaaa5f4e38914b77621037621effe2
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.11.3

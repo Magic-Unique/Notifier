@@ -7,10 +7,9 @@
 
 #import "CLIO.h"
 #import <CommandLine/ANSI.h>
-#import "CLProcess.h"
-#import "CLFlag.h"
+#import "CLCommand.h"
 
-#define CLProcessFlag(_flag) ([CLProcess.currentProcess flag:[CLFlag _flag].key])
+#define CLProcessFlag(_flag) ([CLCommand.currentCommand _flag])
 
 void CLPrintf(NSString * _Nonnull format, ...) {
     if (CLProcessFlag(silent)) {
@@ -81,7 +80,7 @@ void CLVerbose(NSString * _Nonnull format, ...) {
     }
 }
 
-void CLInfo(NSString * _Nonnull format, ...) {
+void _CLInfo(NSString * _Nonnull format, ...) {
     if (CLProcessFlag(silent)) {
         return;
     }
@@ -96,7 +95,7 @@ void CLInfo(NSString * _Nonnull format, ...) {
     CCPrintf(style, @"%@%@\n", _CLGetCurrentIndent(), str);
 }
 
-void CLSuccess(NSString * _Nonnull format, ...) {
+void _CLSuccess(NSString * _Nonnull format, ...) {
     if (CLProcessFlag(silent)) {
         return;
     }
@@ -111,7 +110,7 @@ void CLSuccess(NSString * _Nonnull format, ...) {
     CCPrintf(style, @"%@%@\n", _CLGetCurrentIndent(), str);
 }
 
-void CLWarning(NSString * _Nonnull format, ...) {
+void _CLWarning(NSString * _Nonnull format, ...) {
     if (CLProcessFlag(silent)) {
         return;
     }
@@ -126,7 +125,7 @@ void CLWarning(NSString * _Nonnull format, ...) {
     CCPrintf(style, @"%@%@\n", _CLGetCurrentIndent(), str);
 }
 
-void CLError(NSString * _Nonnull format, ...) {
+void _CLError(NSString * _Nonnull format, ...) {
     if (CLProcessFlag(silent)) {
         return;
     }
@@ -141,7 +140,7 @@ void CLError(NSString * _Nonnull format, ...) {
     CCPrintf(style, @"%@%@\n", _CLGetCurrentIndent(), str);
 }
 
-void CLLog(NSString * _Nonnull format, ...) {
+void _CLLog(NSString * _Nonnull format, ...) {
 #if DEBUG == 1
     va_list args;
     va_start(args, format);
@@ -151,3 +150,19 @@ void CLLog(NSString * _Nonnull format, ...) {
 #endif
 }
 
+
+#if DEBUG == 1
+void _CL_DEBUG(NSArray * _Nonnull objects) {
+    if (objects.count == 0) {
+        return;
+    }
+    NSMutableString *output = [NSMutableString string];
+//    CCPrintf(CCStyleNone, @"%@", _CLGetCurrentIndent());
+    [objects enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//        CCPrintf(CCStyleNone, @"%@%@", idx?@", ":@"", obj);
+        [output appendFormat:@"%@%@", idx?@", ":@"", obj];
+    }];
+//    CCPrintf(CCStyleNone, @"\n");
+    CLLog(@"%@", output);
+}
+#endif

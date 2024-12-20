@@ -3,7 +3,7 @@
 //  CommandLineDemo
 //
 //  Created by Unique on 2018/5/26.
-//  Copyright © 2018年 unique. All rights reserved.
+//  Copyright © 2023 Magic-Unique. All rights reserved.
 //
 
 #import "CLText.h"
@@ -82,7 +82,7 @@ NSUInteger CCStyleWithStyleCode(NSUInteger code) {
 }
 
 NSString *CCStyleStringWithStyle(CCStyle style) {
-    if (CLProcessIsAttached()) {
+    if (CLProcessInXcodeConsole()) {
         return @"";
     }
     if (style != CCStyleNone) {
@@ -109,7 +109,7 @@ void CCPrintf(CCStyle style, NSString *format, ...) {
     NSString *str = [[NSString alloc] initWithFormat:format arguments:args];
     va_end(args);
     
-    if (style == CCStyleNone || CLProcessIsAttached()) {
+    if (style == CCStyleNone || CLProcessInXcodeConsole()) {
         printf("%s", str.UTF8String);
     } else {
         printf("%s", CCStyleStringWithStyle(style).UTF8String);
@@ -124,7 +124,7 @@ NSString *CCText(CCStyle style, NSString *format, ...) {
     NSString *str = [[NSString alloc] initWithFormat:format arguments:args];
     va_end(args);
     
-    if (style == CCStyleNone || CLProcessIsAttached()) {
+    if (style == CCStyleNone || CLProcessInXcodeConsole()) {
         return str;
     } else {
         NSMutableString *output = [NSMutableString string];

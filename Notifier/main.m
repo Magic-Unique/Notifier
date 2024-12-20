@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Notifier.h"
+#import "Send.h"
 #import "NFAppDelegate.h"
 
 void SIGTERM_handler(int signum) {
@@ -20,17 +20,26 @@ void SIGWINCH_handler(int signum) {
     });
 }
 
+@interface Notifier : CLCommand @end
+@implementation Notifier
+
+command_configuration(command) {
+    command.note = @"Send notification on macOS from command line.";
+    command.version = @"1.0.0";
+    command.subcommands = @[[Send class]];
+}
+
+@end
+
+
 int main(int argc, const char * argv[]) {
+    int ret = 0;
     @autoreleasepool {
         signal(SIGTERM, SIGTERM_handler);
         signal(SIGINT, SIGTERM_handler);
         signal(SIGWINCH, SIGWINCH_handler);
         
-        [CLCommand setParametersSortType:CLSortTypeByAddingQueue];
-        CLCommand.mainCommand.version = @"1.0.0";
-        CLMainExplain = @"Send notification on macOS from command line.";
-        CLMakeSubcommand(Notifier, __init_);
-        CLCommandMain();
+        ret = [Notifier main:argc argv:argv];
     }
     return 0;
 }
